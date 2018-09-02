@@ -1,5 +1,12 @@
-# Compartmental_model_astrocytes
-A simple compartmental model for astrocytes to explore interactions between major processes and soma
+Authors: Evan Cresswell and Gordon Erlebacher
+For more information, please email either: 
+
+  Evan Cresswell
+  evancresswell@gmail.com
+
+  Gordon Erlebacher
+  gerlebacher@fsu.edu
+----------------------------------------------------------------------
 
 # Compartmental_model_astrocytes
 A simple compartmental model for astrocytes to explore interactions between major processes and soma
@@ -25,15 +32,18 @@ where:
    sig:      sigma: standard deviation of neuronal input
    dc:       diffusivity in the cytosol
    corr:     pairwise correlation coefficient
-   addOn:    
+   addOn:    set in input.py to 1.0 (this value multiplies the signal of process 0)
    out_file: name of output file that contains time signals
    see:      initial seed for random input signals
    
    ===================================
+
+   To create the object libraries, run: 
+
+      ./create_libraries.x
+
    
-   Python 2.7 is required.
-   
-   Alternatively, run the python script: 
+   Alternatively, run the python script (Python 2.7): 
    
       python create_multiple_runs.py
       
@@ -49,4 +59,13 @@ where:
   
   Once create_multiple_runs.py has completed, directories run_data000/, run_data001/, ... will have been created, 
   which will contain output files, and csv files with spiking data. 
-  
+
+  Note that the .bin files have been deleted (see create_multiple_runs.x) to conserve space. 
+  ======================================================================
+
+======================================================================
+
+We have added in src, a collection of source files with slight modification to take non-unit volume ratios between soma and cytosol, 
+various diagnostic and experiments into account. Modify as you wish. 
+
+======================================================================
